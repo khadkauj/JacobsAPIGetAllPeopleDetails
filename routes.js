@@ -16,4 +16,17 @@ router.get('/:id', async (req, res) => {
     })
 })
 
+router.get("/:id/image", async (req, res) => {
+    id = req.params.id
+    await axios.get(`https://jacobs.university/api/v1/users/${id}/image`, {
+        headers: {
+            "cookie": "sessionid=14bigve5tmqtwukzf4mbwomoucvtq0u1",
+        }
+    }).then(response => {
+        res.status(200).send(response.data)
+    }).catch(error => {
+        console.log("error is" + error)
+    })
+})
+
 module.exports = router
