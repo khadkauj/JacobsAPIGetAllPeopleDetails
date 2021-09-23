@@ -1,6 +1,6 @@
 const router = require("express").Router()
 const axios = require('axios')
-const sessiondId = "ujm4ipq7njjs20ecx7o9r65bsxui3qaf"
+const sessiondId = "w9nkf93v9mdnlovhju7vekpl95ycndki"
 router.get('/:id', async (req, res) => {
     id = req.params.id
     await axios.get(`https://jacobs.university/api/v1/users/${id}/`, {
